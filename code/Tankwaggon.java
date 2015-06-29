@@ -1,4 +1,3 @@
-
 public class Tankwaggon extends Waggon {
 	// Attribute
 	private final double maxFluessigkeit = 2300.5;
@@ -36,6 +35,6 @@ public class Tankwaggon extends Waggon {
 	}
 	
 	public String toString(){
-		return "Tankwaggon mit " + mengeFluessigkeit + "l Flüssigkeit von maximal " + maxFluessigkeit + "l. Giftig: " +  fluessigkeitGiftig;
+		return "Tankwaggon mit " + mengeFluessigkeit + "L Flüssigkeit von maximal " + maxFluessigkeit + "L. Giftig: " +  fluessigkeitGiftig;
 	}
 }

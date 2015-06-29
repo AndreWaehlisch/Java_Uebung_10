@@ -1,4 +1,3 @@
-
 public abstract class Schienenfahrzeug {
 	private int anzAchsen;
 	private double spurbreite;

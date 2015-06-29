@@ -1,10 +1,8 @@
-
 public class Zug {
 	// Attribute
 	private int anzLokomotiven;
 	private int anzContainerWaggons;
 	private int anzTankwaggons;
-	
 	Schienenfahrzeug[] lokomotiven;
 	Schienenfahrzeug[] containerWaggons;
 	Schienenfahrzeug[] tankwaggons;

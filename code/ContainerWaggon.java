@@ -1,4 +1,3 @@
-
 public class ContainerWaggon extends Waggon {
 	// Attribute
 	private int containerPlaetze = 0;

@@ -1,4 +1,3 @@
-
 public abstract class Waggon extends Schienenfahrzeug {
 	// Attribute
 	private double laenge;

@@ -1,4 +1,3 @@
-
 public class Lokomotive extends Schienenfahrzeug {
 	// Attribute
 	private boolean zugfuehrer;
