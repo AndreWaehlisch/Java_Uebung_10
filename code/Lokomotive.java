@@ -16,4 +16,11 @@ public class Lokomotive extends Schienenfahrzeug {
 	public boolean getZugfuehrer(){
 		return zugfuehrer;
 	}
+	
+	public String toString(){
+		if ( zugfuehrer )
+			return "Lokomotive MIT Zugführer";
+		else
+			return "Lokomotive OHNE Zugführer";
+	}
 }

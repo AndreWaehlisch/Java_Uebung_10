@@ -1,6 +1,6 @@
 public class Tankwaggon extends Waggon {
 	// Attribute
-	private final double maxFluessigkeit = 2300.5;
+	private final double maxFluessigkeit = 1234.5;
 	private double mengeFluessigkeit = 0.;
 	private boolean fluessigkeitGiftig = false;
 	
@@ -14,7 +14,7 @@ public class Tankwaggon extends Waggon {
 		if ( mengeFluessigkeit <= maxFluessigkeit &&  mengeFluessigkeit >= 0 ) {
 			this.mengeFluessigkeit = mengeFluessigkeit;
 		} else {
-			System.out.println("Tankwaggon-Fehler: Keine gültige Flüssigkeitsmenge angegeben (muss zwischen 0-"+maxFluessigkeit+" sein).");
+			System.out.println("Tankwaggon-Fehler: Keine gÃ¼ltige FlÃ¼ssigkeitsmenge angegeben (muss zwischen 0-" + maxFluessigkeit + " sein).");
 		}
 	}
 	
@@ -35,6 +35,6 @@ public class Tankwaggon extends Waggon {
 	}
 	
 	public String toString(){
-		return "Tankwaggon mit " + mengeFluessigkeit + "L Flüssigkeit von maximal " + maxFluessigkeit + "L. Giftig: " +  fluessigkeitGiftig;
+		return "Tankwaggon mit " + mengeFluessigkeit + "L FlÃ¼ssigkeit von maximal " + maxFluessigkeit + "L. Giftig: " +  fluessigkeitGiftig;
 	}
 }

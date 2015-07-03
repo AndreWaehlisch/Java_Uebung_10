@@ -12,8 +12,4 @@ public abstract class Waggon extends Schienenfahrzeug {
 	public double getLaenge(){
 		return laenge;
 	}
-	
-	public String toString(){
-		return "Waggon-Länge: " +  laenge;
-	}
 }

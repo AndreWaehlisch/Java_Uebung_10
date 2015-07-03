@@ -10,11 +10,10 @@ public class ContainerWaggon extends Waggon {
 	
 	// Methoden
 	public void setContainerPlaetze(int containerPlaetze){
-		if ( containerPlaetze <= maxContainerPlaetze && containerPlaetze >= 0 ){
+		if ( containerPlaetze <= maxContainerPlaetze && containerPlaetze >= 0 )
 			this.containerPlaetze = containerPlaetze;
-		} else {
-			System.out.println("ContainerWaggon-Fehler: Keine gültige Containerplatzanzahl angegeben (muss zwischen 0-"+maxContainerPlaetze+" sein).");
-		}
+		else
+			System.out.println("ContainerWaggon-Fehler: Keine gÃ¼ltige Containerplatzanzahl angegeben. Gefordert wurde " + containerPlaetze + ", muss aber zwischen 0-" + maxContainerPlaetze + " sein.");
 	}
 	
 	public int getContainerPlaetze(){

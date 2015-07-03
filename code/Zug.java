@@ -1,33 +1,31 @@
-public class Zug {
+public class Zug{
 	// Attribute
 	private int anzLokomotiven;
 	private int anzContainerWaggons;
 	private int anzTankwaggons;
-	Schienenfahrzeug[] lokomotiven;
-	Schienenfahrzeug[] containerWaggons;
-	Schienenfahrzeug[] tankwaggons;
+	
+	public Lokomotive[] lokomotiven;
+	public ContainerWaggon[] containerWaggons;
+	public Tankwaggon[] tankwaggons;
 	
 	// Konstruktor
-	public Zug(int anzLokomotiven, int anzContainerWaggons, int anzTankwaggons){
+	public Zug(int anzAchsen, double spurbreite, int anzLokomotiven, int anzContainerWaggons, int anzTankwaggons){
 		this.anzLokomotiven = anzLokomotiven;
 		this.anzContainerWaggons = anzContainerWaggons;
 		this.anzTankwaggons = anzTankwaggons;
 		
-		Schienenfahrzeug[] lokomotiven = new Schienenfahrzeug[anzLokomotiven];
-		Schienenfahrzeug[] containerWaggons = new Schienenfahrzeug[anzContainerWaggons];
-		Schienenfahrzeug[] tankwaggons = new Schienenfahrzeug[anzTankwaggons];
+		lokomotiven = new Lokomotive[anzLokomotiven];
+		containerWaggons = new ContainerWaggon[anzContainerWaggons];
+		tankwaggons = new Tankwaggon[anzTankwaggons];
 		
-		for(int i=0; i<anzLokomotiven; i++){
-			lokomotiven[i] = new Lokomotive(4, 10, true);
-		}
+		for(int i=0; i<anzLokomotiven; i++)
+			lokomotiven[i] = new Lokomotive(anzAchsen, spurbreite, false); // int anzAchsen, double spurbreite, boolean zugfuehrer
 		
-		for(int i=0; i<anzContainerWaggons; i++){
-			containerWaggons[i] = new ContainerWaggon(4, 10, 100);
-		}
+		for(int i=0; i<anzContainerWaggons; i++)
+			containerWaggons[i] = new ContainerWaggon(anzAchsen, spurbreite, 100.); // int anzAchsen, double spurbreite, double laenge
 		
-		for(int i=0; i<anzTankwaggons; i++){
-			tankwaggons[i] = new Tankwaggon(4, 10, 90);
-		}
+		for(int i=0; i<anzTankwaggons; i++)
+			tankwaggons[i] = new Tankwaggon(anzAchsen, spurbreite, 90.); // int anzAchsen, double spurbreite, double laenge
 	}
 	
 	// Methoden
@@ -46,17 +44,14 @@ public class Zug {
 	public String toString(){
 		String result = "";
 		
-		for(int i=0; i<anzLokomotiven; i++){
+		for(int i=0; i<anzLokomotiven; i++)
 			result = result + lokomotiven[i] + '\n';
-		}
 		
-		for(int i=0; i<anzContainerWaggons; i++){
+		for(int i=0; i<anzContainerWaggons; i++)
 			result = result + containerWaggons[i] + '\n';
-		}
 		
-		for(int i=0; i<anzTankwaggons; i++){
+		for(int i=0; i<anzTankwaggons; i++)
 			result = result + tankwaggons[i] + '\n';
-		}
 		
 		return result;
 	}
